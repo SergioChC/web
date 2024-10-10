@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Affairs Financials</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 
-<body>
+<script>
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+    });
+</script>
+
+<body class="grid-container3">
     <header>
-        <h1>Global Affairs</h1>
-        <p>News, data and articles from all around the globe</p>
+        <h1><img src="../images/global affairs 2.png" alt="Logo" class="logo">Global Affairs</h1>
+        <h2>News, data and articles from all around the globe</h2>
     </header>
 
-    <div class="container">
         <nav>
             <a href="home.html">Home</a>
             <a href="financials.html">Financials</a>
@@ -23,8 +28,6 @@
             <a href="economics.html">Economics</a>
             <a href="signup.html">Sign up</a>
         </nav>
-    </div>
-    <hr>
 
     <section>
         <article>
@@ -35,7 +38,7 @@
                 <source src="../images/inflation.mp4" type="video/mp4">
                 <!--Referencia con direccion relativa-->
             </video>
-            <p id="polit">Inflation cooled further in August, falling to a three-year low and cementing views that the
+            <p>Inflation cooled further in August, falling to a three-year low and cementing views that the
                 Federal Reserve will soon start cutting interest rates.
 
                 Prices rose 2.5% in the 12 months ending in August, down from 2.9% in July, with falling gasoline prices
@@ -53,7 +56,7 @@
                 the central bank's two-day policy-setting meeting September 17-18. Less certain is how big a cut the Fed
                 intends to make, likely a quarter- or half-percentage point. Additional reductions are likely to come
                 later this year and into next. </p>
-            <p id="polit">"Overall, inflation appears to have been successfully tamed but, with housing inflation still
+            <p>"Overall, inflation appears to have been successfully tamed but, with housing inflation still
                 refusing to moderate as quickly as hoped, it hasn't been completely vanquished. Under those
                 circumstances, we expect the Fed to take a measured approach to cutting interest rates," Paul Ashworth,
                 chief North America economist at Capital Economics said in a research note.
@@ -62,19 +65,17 @@
                 recession. More recent months have seen a cooling labor market, with hiring and wage increases slowing,
                 and with the U.S. economy seemingly on a path toward a so-called "soft landing" whereby a recession is
                 avoided. </p>
+
+                <blockquote><!--Citacion de fuente de la informacion-->
+                    Reference:<a
+                          href="https://www.cbsnews.com/news/inflation-cpi-fed-readies-to-cut-rates-next-week/">https://www.cbsnews.com/news</a>
+                  </blockquote><br>
+                  <br>
+                  <br>
         </article>
     </section>
     <br>
     <br>
-    <hr>
-
-    <blockquote><!--Citacion de fuente de la informacion-->
-        Reference:<a
-              href="https://www.cbsnews.com/news/inflation-cpi-fed-readies-to-cut-rates-next-week/">https://www.cbsnews.com/news</a>
-      </blockquote><br>
-      <br>
-      <br>
-      <hr>
 
     <footer>
         <p>Sergio Chavez Castillo

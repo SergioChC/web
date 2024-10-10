@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Affairs Economics</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
-<body>
+
+<script>
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+    });
+</script>
+
+<body class="grid-container2">
     <header>
-        <h1>Global Affairs</h1>
-        <p>News, data and articles from all around the globe</p>
+        <h1><img src="../images/global affairs 2.png" alt="Logo" class="logo">Global Affairs</h1>
+        <h2>News, data and articles from all around the globe</h2>
     </header>
-    <div class="container">
+
         <nav>
             <a href="home.html">Home</a>
             <a href="financials.html">Financials</a>
@@ -20,15 +27,8 @@
             <a href="economics.html">Economics</a>
             <a href="signup.html">Sign up</a>
         </nav>
-    </div>
-    <hr>
 
-        <section>
-                <h2>Updated data on the main economic indicators of the G20 (Group of Twenty), the most important global economies.</h2>
-                <p><strong>Date:</strong> [12 august 2024]</p>
-        </section>
-
-    <div>
+    <section>
         <table>
             <thead>
                 <tr> <!--tr indica un nuevo renglon-->
@@ -184,15 +184,19 @@
         </table>
     </div><br>
     <br>
-    <hr>
+    </section>
 
+    <aside>
+        <h2>Updated data on the main economic indicators of the G20 (Group of Twenty), the most important global economies.</h2>
+                <p><strong>Date:</strong> [12 august 2024]</p>
+                <br>
     <blockquote><!--Citacion de fuente de la informacion-->
         Reference:<a
               href="https://datosmacro.expansion.com/">https://datosmacro.expansion.com/</a>
       </blockquote><br>
       <br>
       <br>
-      <hr>
+    </aside>
 
       <footer>
         <p>Sergio Chavez Castillo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matricula:21550765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="email:l21550765@chihuahua2.tecnm.mx">l21550765@chihuahua2.tecnm.mx</a></p>

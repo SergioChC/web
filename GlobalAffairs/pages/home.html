@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Affairs Inicio</title>
-    <link rel="stylesheet" href="../css/style.css">   
 </head>
-<body>
-    <header>
-        <h1>Global Affairs</h1>
-        <p>News, data and articles from all around the globe</p>
-    </header>
 
-    <div class="container">
+<link rel="stylesheet" href="../css/stylesheet.css">
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
+<body class="grid-container1">
+        <header>
+            <h1><img src="../images/global affairs 2.png" alt="Logo" class="logo">Global Affairs</h1>
+            <h2>News, data and articles from all around the globe</h2>
+        </header>
+
         <nav>
             <a href="home.html">Home</a>
             <a href="financials.html">Financials</a>
@@ -21,16 +28,54 @@
             <a href="economics.html">Economics</a>
             <a href="signup.html">Sign up</a>
         </nav>
-    </div>
-    <hr>
-    <div class="image-container">
-        <img src="../images/global affairs.png">
-    </div><br>
-    <br>
-    <hr>
 
-    <footer>
-        <p>Sergio Chavez Castillo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matricula:21550765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="email:l21550765@chihuahua2.tecnm.mx">l21550765@chihuahua2.tecnm.mx</a></p>
-    </footer>
+        <aside>
+            <h2>Sitios Oficiales</h2>
+            <ul>
+                <li>Financials
+                    <ul>
+                        <li><a href="https://www.wsj.com/">The Wall Street Journal</a></li>
+                        <li><a href="https://www.bloomberg.com/">Bloomberg</a></li>
+                    </ul>
+                </li>
+                <li>Politics
+                    <ul>
+                        <li><a href="https://www.globaltimes.cn/">Global Times</a></li>
+                        <li><a href="https://www.washingtonpost.com/">Washington Post</a></li>
+                    </ul>
+                </li>  
+                <li>Technology
+                    <ul>
+                        <li><a href="https://www.xataka.com/tag/tecnologia">Xataka</a></li>
+                        <li><a href="https://es.wired.com/">Wired</a></li>
+                    </ul>
+                </li>  
+                <li>Economics
+                    <ul>
+                        <li><a href="https://www.reuters.com/">Reuters</a></li>
+                        <li><a href="https://www.economist.com/">The Economist</a></li>
+                    </ul>
+                </li>    
+            </ul>
+        </aside>
+
+        <section>
+            <h3>Welcome to Global Affairs.</h3>
+                <p id="description">Here you will find the latest and most important news and data from around the world. Our mission is to provide
+                accurate, timely, and insightful news coverage on global events that shape our world today. From
+                politics and economics to technology and financials, we offer a diverse range of perspectives to keep you
+                informed and engaged.</p>
+                <div class="image-container">
+                    <img src="../images/global affairs.png" alt="imagen" class="animation">
+                </div>
+
+        </section>
+
+        <footer>
+            <p>Sergio Chavez Castillo
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matricula: 21550765&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="mailto:l21550765@chihuahua2.tecnm.mx">l21550765@chihuahua2.tecnm.mx</a></p>
+        </footer>
 </body>
+
 </html>

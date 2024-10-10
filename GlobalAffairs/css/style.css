@@ -16,9 +16,15 @@ header h1{
     font-size: 50px;
 }
 
-.container {
-    padding: 20px;
-    text-align: left;
+.container{
+        display: grid;
+        
+        grid-template-areas: "header   header    header    header"
+                             "nav      nav       nav       nav"
+                             "aside    section   section   section"
+                             "footer   footer    footer    footer";
+
+        grid-gap: 2px;
 }
 footer {
     background-color: #5ab8a5;

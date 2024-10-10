@@ -1,0 +1,350 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el cuerpo y HTML ocupen el 100% de la altura */
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-areas: 
+        "header   header    header    header   header"
+        "nav      nav       nav       nav     nav"
+        "aside    section   section   section section"
+        "footer   footer    footer    footer   footer";
+    
+    grid-gap: 2px; /* Espacio entre las áreas */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Definir el tamaño de las columnas */
+    grid-template-rows: auto auto 1fr auto; /* Definir el tamaño de las filas */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+.grid-container2 {
+    display: grid;
+    grid-template-areas: 
+        "header   header    header    header   header"
+        "nav      nav       nav       nav      nav"
+        "section   section   section  section  aside"
+        "footer   footer    footer    footer   footer";
+    
+    grid-gap: 2px; /* Espacio entre las áreas */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Definir el tamaño de las columnas */
+    grid-template-rows: auto auto 1fr auto; /* Definir el tamaño de las filas */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+.grid-container3 {
+    display: grid;
+    grid-template-areas: 
+        "header   header    header    header   header"
+        "nav      nav       nav       nav     nav"
+        "section    section   section   section section"
+        "footer   footer    footer    footer   footer";
+    
+    grid-gap: 2px; /* Espacio entre las áreas */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Definir el tamaño de las columnas */
+    grid-template-rows: auto auto 1fr auto; /* Definir el tamaño de las filas */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+
+header {
+    grid-area: header;
+    background: linear-gradient(to bottom, #1e3a8a, #3b82f6, #60a5fa, #93c5fd);
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.logo{
+    width: 60px;
+    height: auto;
+    transform: translateX(-100vw); /* Mueve el logo fuera de la pantalla, a la izquierda */
+    transition: transform 2s ease; /* Transición para mover el logo */
+}
+/* Cuando la página se carga, se activa la animación del logo */
+body.loaded .logo {
+    transform: translateX(0); /* Lleva el logo a su posición final (0px de la izquierda) */
+}
+h1 {
+    display: flex;
+    align-items: center;
+    /* Alinea el texto y la imagen verticalmente */
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-shadow: 2px 4px 5px rgba(0, 13, 255, 0.5); /* Sombra de texto */
+    font-weight: 700;
+}
+h2{
+    display: flex;
+    align-items: center;
+    /* Alinea el texto y la imagen verticalmente */
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h3{
+    display: flex;
+    align-items: center;
+    /* Alinea el texto y la imagen verticalmente */
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-bottom: 2px solid blue;
+}
+
+nav a:link{
+    margin: 10px;
+    text-decoration: none;
+    color: #1e3a8a;
+}
+nav a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: purple; /* Cambia el color si ya fue visitado */
+}
+
+/* Cuando el enlace está siendo clicado */
+nav a:active {
+    color: red; /* Cambia el color mientras es clicado */
+}
+
+aside {
+    grid-area: aside;
+    border: 2px solid skyblue;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(199, 168, 244);
+}
+
+section {
+    grid-area: section;
+    background-image: url('../images/background.png'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+#description{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+#description::first-letter {
+    font-size: 3em; /* Tamaño grande */
+    font-weight: bold; /* Letra en negritas */
+    font-family: 'Georgia', serif; /* Fuente diferente */
+    margin-right: 2px; /* Espacio entre la letra y el resto del texto */
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-color: solid aqua;
+    border-radius: 4px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+.animation{
+    width: 250px; /* Tamaño inicial de la imagen */
+    animation: crecerYDisminuir 2s infinite; /* Duración y repetición infinita */
+}
+
+@keyframes crecerYDisminuir {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(0.8); /* Se hace pequeña al 50% del tiempo */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
+
+figure>figcaption{
+    color: gray;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #51e24a; 
+    box-shadow: 0 0 5px rgba(74, 226, 84, 0.249); 
+    background-color: #c0f1c5; 
+}
+
+.checkbox, .select-group {
+    margin-bottom: 20px;
+}
+.checkbox label, .select-group label {
+    display: inline-block;
+    margin-right: 15px;
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+button[type="reset"] {
+    background-color: #f44336;
+}
+button:hover {
+    opacity: 0.9;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+footer {
+    grid-area: footer;
+    background-color:skyblue;
+    text-align: center;
+}
+
+/*LAP TOP*/
+@media screen and (min-width: 1280px) {
+
+    }
+
+
+/*CELULARES*/
+@media screen and (max-width: 640px) { 
+    .grid-container1, .grid-container2, .grid-container3 {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "section"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr; /* Cambia a una columna */
+        grid-template-rows: auto auto 1fr auto auto; /* Ajusta el tamaño de las filas */
+        height: auto; /* Permite que la altura sea automática */
+    }
+
+    header h1 {
+        font-size: 30px; 
+    }
+
+    section, aside {
+        font-size: 16px; 
+        padding: 10px; 
+    }
+
+    img, video {
+        max-width: 100%; 
+        height: auto;
+    }
+
+    table, th, td {
+        font-size: 14px; 
+        padding: 5px; 
+    }
+
+    form {
+        max-width: 100%; 
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; 
+        padding: 15px; 
+        font-size: 16px;
+    }
+}
+
+  /*TABLETS*/
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+
+    .grid-container{
+        grid-template-areas: "header header header"
+                             "nav nav nav"
+                             "aside section section"
+                             "footer footer footer";
+        grid-gap: 20px;
+
+        /*grid-auto-rows: 100px;*/
+        /*grid-auto-rows: minmax(100px, auto);*/
+     }
+
+     section {
+            grid-template-columns: 1fr; /*cambia a una sola columna el section en lugar de dos para lectura comoda*/
+            grid-gap: 15px;/*Se agrega separacion entre las columnas */
+     }
+
+
+    p{
+        font-size: 1rem;  
+    }
+    img {
+            width: 100px;  /* Ajuste del tamaño de imagen para tablets */
+        }
+    #flotar{
+        float:none;
+        padding: 5px;
+        display: block;
+        width: auto;
+    }
+    h1{
+        font-size: 1.6rem;
+     }
+    
+    h2{
+        font-size: 1.2rem;  
+    }
+
+
+}
+
